@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>Set of common domain classes.</Description>
+    <Authors>Paul Stanley</Authors>
+    <Company></Company>
+    <PackageTags>domain money postcode common uk paymentcard</PackageTags>
+  </PropertyGroup>
+
+</Project>
