@@ -15,3 +15,4 @@ Domain has classes covering domain related functionality including:
 - Money
 - Payment Card
 - UK Postcode
+- Temperature
