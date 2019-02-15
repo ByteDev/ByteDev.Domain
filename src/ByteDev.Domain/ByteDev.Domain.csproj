@@ -5,7 +5,7 @@
     <Description>Set of common domain classes.</Description>
     <Authors>Paul Stanley</Authors>
     <Company></Company>
-    <PackageTags>domain money postcode common uk paymentcard</PackageTags>
+    <PackageTags>domain money postcode common uk paymentcard temperature email emailaddress</PackageTags>
   </PropertyGroup>
 
 </Project>
