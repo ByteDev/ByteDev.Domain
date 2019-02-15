@@ -16,3 +16,4 @@ Domain has classes covering domain related functionality including:
 - Payment Card
 - UK Postcode
 - Temperature
+- Email Address

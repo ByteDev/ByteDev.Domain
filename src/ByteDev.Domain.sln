@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteDev.Domain", "ByteDev.Domain\ByteDev.Domain.csproj", "{EC218893-3F09-4E72-9A87-E3010EE00CE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ByteDev.Domain", "ByteDev.Domain\ByteDev.Domain.csproj", "{EC218893-3F09-4E72-9A87-E3010EE00CE3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{762E3E82-C19F-44B8-9BED-F77F1BA13B98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteDev.Domain.UnitTests", "ByteDev.Domain.UnitTests\ByteDev.Domain.UnitTests.csproj", "{76DDF514-4581-4AF2-A5D6-4B1CB1031777}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ByteDev.Domain.UnitTests", "ByteDev.Domain.UnitTests\ByteDev.Domain.UnitTests.csproj", "{76DDF514-4581-4AF2-A5D6-4B1CB1031777}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{2FF43465-8259-4A3D-A38F-A528668A02DE}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
