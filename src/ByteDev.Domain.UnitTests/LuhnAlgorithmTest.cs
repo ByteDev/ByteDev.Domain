@@ -17,13 +17,13 @@ namespace ByteDev.Domain.UnitTests
         [Test]
         public void WhenNumberIsNull_ThenThrowException()
         {
-            Assert.Throws<ArgumentException>(() => _sut.Execute(null));
+            Assert.Throws<ArgumentException>(() => _sut.Check(null));
         }
 
         [Test]
         public void WhenNumberIsEmpty_ThenThrowException()
         {
-            Assert.Throws<ArgumentException>(() => _sut.Execute(string.Empty));
+            Assert.Throws<ArgumentException>(() => _sut.Check(string.Empty));
         }
 
         [TestCase("79927398713")]
@@ -32,7 +32,7 @@ namespace ByteDev.Domain.UnitTests
         [TestCase("343169701675125")]
         public void WhenNumberIsValid_ThenReturnTrue(string value)
         {
-            var result = _sut.Execute(value);
+            var result = _sut.Check(value);
 
             Assert.That(result, Is.True);
         }
@@ -43,7 +43,7 @@ namespace ByteDev.Domain.UnitTests
         [TestCase("4539950608270764")]
         public void WhenNumberIsInvalid_ThenReturnFalse(string value)
         {
-            var result = _sut.Execute(value);
+            var result = _sut.Check(value);
 
             Assert.That(result, Is.False);
         }

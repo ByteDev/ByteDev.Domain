@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Text.RegularExpressions;
 
 namespace ByteDev.Domain
 {
@@ -10,6 +11,23 @@ namespace ByteDev.Domain
                 return source;
 
             return Regex.Replace(source, @"\s+", "");
+        }
+
+        public static int FirstDigits(this string source, int numberOfDigits)
+        {
+            return Convert.ToInt32(source.Substring(0, numberOfDigits));
+        }
+
+        public static bool IsLengthBetween(this string source, int from, int to)
+        {
+            return source.Length >= from && source.Length <= to;
+        }
+
+        public static bool ContainsOnlyDigits(this string source)
+        {
+            var regEx = new Regex(@"^[0-9]+$");
+
+            return regEx.IsMatch(source);
         }
     }
 }

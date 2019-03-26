@@ -5,7 +5,7 @@ namespace ByteDev.Domain
 {
     public class LuhnAlgorithm
     {
-        public bool Execute(string number)
+        public bool Check(string number)
         {
             if(string.IsNullOrEmpty(number))
                 throw new ArgumentException("Number was empty or null.", nameof(number));
