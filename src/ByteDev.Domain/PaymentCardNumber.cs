@@ -9,7 +9,7 @@ namespace ByteDev.Domain
 
         public string Number;
 
-        public CreditCardType Type { get; }
+        public PaymentCardType Type { get; }
 
         public bool PassedLuhnCheck { get; }
 
@@ -26,42 +26,42 @@ namespace ByteDev.Domain
             PassedLuhnCheck = new LuhnAlgorithm().Check(number);
         }
 
-        private static CreditCardType GetCreditCardType(string number)
+        private static PaymentCardType GetCreditCardType(string number)
         {
             if (CheckIsVisaElectron(number))
-                return CreditCardType.VisaElectron;
+                return PaymentCardType.VisaElectron;
             
             if (CheckIsDiscover(number))
-                return CreditCardType.Discover;
+                return PaymentCardType.Discover;
 
             if (CheckIsInstaPayment(number))
-                return CreditCardType.InstaPayment;
+                return PaymentCardType.InstaPayment;
 
             if (CheckIsJcb(number))
-                return CreditCardType.Jcb;
+                return PaymentCardType.Jcb;
 
             if (CheckIsMaestro(number))
-                return CreditCardType.Maestro;
+                return PaymentCardType.Maestro;
 
             if (CheckIsAmex(number))
-                return CreditCardType.Amex;
+                return PaymentCardType.Amex;
 
             if (CheckIsMasterCard(number))
-                return CreditCardType.MasterCard;
+                return PaymentCardType.MasterCard;
 
             if (CheckIsDinersClubCarteBlanche(number))
-                return CreditCardType.DinersClubCarteBlanche;
+                return PaymentCardType.DinersClubCarteBlanche;
 
             if (CheckIsDinersClubInternational(number))
-                return CreditCardType.DinersClubInternational;
+                return PaymentCardType.DinersClubInternational;
 
             if (CheckIsMasterCard(number))
-                return CreditCardType.MasterCard;
+                return PaymentCardType.MasterCard;
 
             if (CheckIsVisa(number))
-                return CreditCardType.Visa;
+                return PaymentCardType.Visa;
 
-            return CreditCardType.Unknown;
+            return PaymentCardType.Unknown;
         }
         
         private static bool CheckIsMaestro(string number)

@@ -48,18 +48,18 @@ namespace ByteDev.Domain.UnitTests
             Assert.That(sut.PassedLuhnCheck, Is.False);
         }
 
-        [TestCase(TestPaymentCardNumbers.ValidUnknown, CreditCardType.Unknown)]
-        [TestCase(TestPaymentCardNumbers.ValidMasterCard, CreditCardType.MasterCard)]
-        [TestCase(TestPaymentCardNumbers.ValidVisa, CreditCardType.Visa)]
-        [TestCase(TestPaymentCardNumbers.ValidVisaElectron, CreditCardType.VisaElectron)]
-        [TestCase(TestPaymentCardNumbers.ValidAmex, CreditCardType.Amex)]
-        [TestCase(TestPaymentCardNumbers.ValidDinersClubCarteBlanche, CreditCardType.DinersClubCarteBlanche)]
-        [TestCase(TestPaymentCardNumbers.ValidDinersClubInternational, CreditCardType.DinersClubInternational)]
-        [TestCase(TestPaymentCardNumbers.ValidDiscover, CreditCardType.Discover)]
-        [TestCase(TestPaymentCardNumbers.ValidInstaPayment, CreditCardType.InstaPayment)]
-        [TestCase(TestPaymentCardNumbers.ValidJcb, CreditCardType.Jcb)]
-        [TestCase(TestPaymentCardNumbers.ValidMaestro, CreditCardType.Maestro)]
-        public void WhenNumberIsValid_ThenSetType(string number, CreditCardType type)
+        [TestCase(TestPaymentCardNumbers.ValidUnknown, PaymentCardType.Unknown)]
+        [TestCase(TestPaymentCardNumbers.ValidMasterCard, PaymentCardType.MasterCard)]
+        [TestCase(TestPaymentCardNumbers.ValidVisa, PaymentCardType.Visa)]
+        [TestCase(TestPaymentCardNumbers.ValidVisaElectron, PaymentCardType.VisaElectron)]
+        [TestCase(TestPaymentCardNumbers.ValidAmex, PaymentCardType.Amex)]
+        [TestCase(TestPaymentCardNumbers.ValidDinersClubCarteBlanche, PaymentCardType.DinersClubCarteBlanche)]
+        [TestCase(TestPaymentCardNumbers.ValidDinersClubInternational, PaymentCardType.DinersClubInternational)]
+        [TestCase(TestPaymentCardNumbers.ValidDiscover, PaymentCardType.Discover)]
+        [TestCase(TestPaymentCardNumbers.ValidInstaPayment, PaymentCardType.InstaPayment)]
+        [TestCase(TestPaymentCardNumbers.ValidJcb, PaymentCardType.Jcb)]
+        [TestCase(TestPaymentCardNumbers.ValidMaestro, PaymentCardType.Maestro)]
+        public void WhenNumberIsValid_ThenSetType(string number, PaymentCardType type)
         {
             var sut = new PaymentCardNumber(number);
 

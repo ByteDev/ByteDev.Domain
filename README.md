@@ -1,3 +1,5 @@
+[![NuGet Package](https://img.shields.io/nuget/v/ByteDev.Domain.svg)](https://www.nuget.org/packages/ByteDev.Domain)
+
 # ByteDev.Domain
 
 Domain is a collection of domain related classes.

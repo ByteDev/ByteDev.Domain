@@ -1,6 +1,6 @@
 ﻿namespace ByteDev.Domain
 {
-    public enum CreditCardType
+    public enum PaymentCardType
     {
         Unknown = 0,
         Visa = 1,
