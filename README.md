@@ -14,12 +14,6 @@ ByteDev.Domain is hosted as a package on nuget.org.  To install from the Package
 
 Further details can be found on the [nuget page](https://www.nuget.org/packages/ByteDev.Domain/).
 
-## Code
-
-The repo can be cloned from git bash:
-
-`git clone https://github.com/ByteDev/ByteDev.Domain`
-
 ## Usage
 
 Domain has classes covering domain related functionality including:
