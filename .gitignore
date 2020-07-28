@@ -1,11 +1,11 @@
-# OS junk files
+#OS junk files
 [Tt]humbs.db
 *.DS_Store
 
-# Rider
+#Rider
 *.idea
 
-# Visual Studio files
+#Visual Studio files
 *.[Oo]bj
 *.user
 *.aps
@@ -34,6 +34,12 @@ ipch/
 [Rr]elease*/
 Ankh.NoLoad
 
+# Visual Studio DB projects
+*.dbmdl
+
+# Visual Studio cache files
+.vs/
+
 # MonoDevelop
 *.pidb
 *.userprefs
@@ -50,33 +56,27 @@ _ReSharper*/
 # Subversion files
 .svn
 
-# Office Temp files
+# Office Temp Files
 ~$*
 
-# Vim Temp files
+# Vim Temp Files
 *~
 
 # NuGet
 packages/
 *.nupkg
 
-# NCrunch
+# Ncrunch
 *ncrunch*
 *crunch*.local.xml
-
-# Visual Studio database projects
-*.dbmdl
 
 # Test files
 *.testsettings
 
-# Visual studio
-.vs/
-
-# Any libraries
+# Included libraries
 !lib/**
 
-# Cake build files
+# Cake build
 build/tools/**
 !build/
 !build/tools/packages.config

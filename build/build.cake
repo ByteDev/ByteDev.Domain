@@ -1,21 +1,25 @@
-#addin nuget:?package=Cake.Incubator&version=3.0.0
-#tool "nuget:?package=NUnit.Runners&version=2.6.4"
-#tool "nuget:?package=GitVersion.CommandLine"
+#addin "nuget:?package=Cake.Incubator&version=5.1.0"
+#tool "nuget:?package=NUnit.ConsoleRunner&version=3.11.1"
+#tool "nuget:?package=GitVersion.CommandLine&version=5.2.4"
 #load "ByteDev.Utilities.cake"
+
+var solutionName = "ByteDev.Domain";
+var projName = "ByteDev.Domain";
+
+var solutionFilePath = "../" + solutionName + ".sln";
+var nuspecFilePath = projName + ".nuspec";
 
 var nugetSources = new[] {"https://api.nuget.org/v3/index.json"};
 
 var target = Argument("target", "Default");
 
-var solutionFilePath = "../src/ByteDev.Domain.sln";
-
 var artifactsDirectory = Directory("../artifacts");
 var nugetDirectory = artifactsDirectory + Directory("NuGet");
-	
+
 var configuration = GetBuildConfiguration();
 
 Information("Configurtion: " + configuration);
-	
+
 
 Task("Clean")
     .Does(() =>
@@ -69,14 +73,13 @@ Task("CreateNuGetPackages")
     {
 		var nugetVersion = GetNuGetVersion();
 
-        var settings = new DotNetCorePackSettings()
+		var nugetSettings = new NuGetPackSettings 
 		{
-			ArgumentCustomization = args => args.Append("/p:Version=" + nugetVersion),
-			Configuration = configuration,
+			Version = nugetVersion,
 			OutputDirectory = nugetDirectory
 		};
                 
-		DotNetCorePack("../src/ByteDev.Domain/ByteDev.Domain.csproj", settings);
+		NuGetPack(nuspecFilePath, nugetSettings);
     });
 
    
