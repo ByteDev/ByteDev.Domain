@@ -29,5 +29,13 @@ namespace ByteDev.Domain
 
             return regEx.IsMatch(source);
         }
+
+        public static char SafeGetChar(this string source, int index, char defaultChar = '\0')
+        {
+            if (index < 0 || index >= source.Length)
+                return defaultChar;
+
+            return source[index];
+        }
     }
 }
